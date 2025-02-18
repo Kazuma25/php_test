@@ -1,0 +1,22 @@
+{# A voir la documentation https://twig.symfony.com/doc/3.x/ #}
+
+{% extends 'base.html.twig' %}
+
+{% block title 'Toute les recettes' %}
+
+{% block body %}
+
+{% include('Page_include/header.html.twig') %}
+
+<h1 class="title">Recette de Pancakes</h1>
+        <div class="section">
+            <h2>Les recettes</h2>
+            <ul>
+                <li>{{recipe.title}}</li>
+                <li>{{recipe.text | nl2br}}</li> <!-- la balise nl2br permet de sauter des lignes -->
+            </ul>
+        </div>
+
+
+
+{% endblock %}

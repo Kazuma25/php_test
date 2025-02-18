@@ -1,0 +1,13 @@
+#Vas scanner l'enssemble des controlleur pour avoir les attribut et vas nous les implanter directement en route,
+# donc pas besoin de toucher
+# pour voir toute les routes 'php bin/console debug:router'
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+
+# home:
+#     path: /
+#     controller: App\Controller\HomeController::index

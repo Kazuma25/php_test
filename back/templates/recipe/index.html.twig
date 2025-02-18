@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Toute les recettes' %}
+
+{% block body %}
+
+{% include('Page_include/header.html.twig') %}
+
+<h1 class="title">Aucune recette</h1>
+
+        <div class="section">
+            <h2>Les recettes</h2>
+            <p>il y a {{nbTotalRecettes}} recettes disponible</p>
+            <ul>
+            <!-- pour citer plusieur objet dans une liste -->
+            {% for recipe in recipes %}
+                <li><a href="{{ path('recipe.show', {id:recipe.id , slug:recipe.slug}) }}"> {{recipe.title}}<a/></li>
+            {% endfor %}
+            </ul>
+        </div>
+        
+        {{ dump(app.flashes) }}
+
+{% include('Page_include/footer.html.twig') %}
+
+{% endblock %}

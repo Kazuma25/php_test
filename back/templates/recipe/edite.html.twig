@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Toute les recettes' %}
+
+{% block body %}
+
+{% include('Page_include/header.html.twig') %}
+
+<h1>{{recipe.title}}</h1>
+
+<!-- form() est la fonction qui est appeller et le form dans la méthode est le form initier dans le controlleur  -->
+{{ form(form) }}
+
+{% include('Page_include/footer.html.twig') %}
+
+{% endblock %}
